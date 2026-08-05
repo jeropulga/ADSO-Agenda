@@ -5,7 +5,7 @@ export default function App() {
   const contactos = [
     {
       id: 1,
-      nombre: "Carolina Pérez",
+      nombre: "Carolina Pérezz",
       telefono: "300 123 4567",
       correo: "carolina@sena.edu.co",
       etiqueta: "Compañera",
