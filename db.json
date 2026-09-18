@@ -1,0 +1,47 @@
+{
+  "contactos": [
+    {
+      "nombre": "jero",
+      "telefono": "67676767",
+      "correo": "jero@gmzail.com",
+      "etiqueta": "Soy un maldito arquitecto",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "nombre": "Bruno Martínez",
+      "telefono": "3109876543",
+      "correo": "bruno.m@hotmail.com",
+      "etiqueta": "familia"
+    },
+    {
+      "id": "3",
+      "nombre": "Carla Rodríguez",
+      "telefono": "3205551234",
+      "correo": "carla.rod@yahoo.com",
+      "etiqueta": "amigos"
+    },
+    {
+      "id": "4",
+      "nombre": "Diego Fernández",
+      "telefono": "3153219876",
+      "correo": "diego.f@outlook.com",
+      "etiqueta": "trabajo"
+    },
+    {
+      "id": "5",
+      "nombre": "Elena Torres",
+      "telefono": "3003214567",
+      "correo": "elena.torres@gmail.com",
+      "etiqueta": "familia"
+    },
+    {
+      "id": "6",
+      "nombre": "Felipe Ramírez",
+      "telefono": "3187654321",
+      "correo": "felipe.ram@gmail.com",
+      "etiqueta": "amigos"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

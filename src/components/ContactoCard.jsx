@@ -1,45 +1,44 @@
-export default function ContactoCard({
-  nombre,
-  telefono,
-  correo,
-  etiqueta,
-  onEliminar,
-}) {
+// Archivo: src/components/ContactoCard.jsx
+// Componente que muestra la información de un contacto en una tarjeta.
+// Incluye botones para Editar y Eliminar.
+
+function ContactoCard({ nombre, telefono, correo, etiqueta, onEliminar, onEditar }) {
   return (
-    <article className="bg-white border border-gray-200 rounded-xl shadow-sm p-5">
+    <article className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      {/* Información principal del contacto */}
+      <div>
+        <h3 className="text-base font-semibold text-gray-900">{nombre}</h3>
+        <p className="text-sm text-gray-600">Tel: {telefono}</p>
+        <p className="text-sm text-gray-600">Correo: {correo}</p>
+        {etiqueta && (
+          <span className="inline-flex mt-1 px-2 py-0.5 rounded-full text-xs font-medium bg-purple-50 text-purple-700">
+            {etiqueta}
+          </span>
+        )}
+      </div>
 
-      {/* Nombre destacado */}
-      <h3 className="text-xl font-bold text-gray-900 mb-3">
-        {nombre}
-      </h3>
-
-      {/* Teléfono */}
-      <p className="text-gray-700 mb-1">
-        <strong>Teléfono:</strong> {telefono}
-      </p>
-
-      {/* Correo */}
-      <p className="text-gray-700 mb-1">
-        <strong>Correo:</strong> {correo}
-      </p>
-
-      {/* Etiqueta */}
-      {etiqueta && (
-        <p className="text-gray-600 text-sm mb-4">
-          <strong>Etiqueta:</strong> {etiqueta}
-        </p>
-      )}
-
-      {/* Botón eliminar */}
-      <div className="flex justify-start">
+      {/* Botones de acción */}
+      <div className="flex gap-2 justify-end">
+        {/* Botón Editar */}
         <button
-          onClick={() => onEliminar(correo)}
-          className="bg-red-500 hover:bg-red-600 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+          type="button"
+          onClick={onEditar}
+          className="text-xs md:text-sm px-3 py-2 rounded-xl border border-gray-300 text-gray-700 hover:bg-gray-100"
+        >
+          Editar
+        </button>
+
+        {/* Botón Eliminar */}
+        <button
+          type="button"
+          onClick={onEliminar}
+          className="text-xs md:text-sm px-3 py-2 rounded-xl bg-red-500 text-white hover:bg-red-600"
         >
           Eliminar
         </button>
       </div>
-
     </article>
   );
 }
+
+export default ContactoCard;
